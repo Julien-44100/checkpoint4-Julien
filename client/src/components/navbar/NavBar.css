@@ -1,0 +1,9 @@
+.navbar {
+  background-color: #808080;
+  height: 50px;
+}
+.navbar-connexion-link {
+  color: white;
+  margin-left: 800px;
+  margin-top: 80px;
+}

@@ -1,0 +1,16 @@
+.connexion {
+  justify-content: center; /* Centrage horizontal */
+  align-items: center; /* Centrage vertical */
+  height: 100vh; /* Prendre toute la hauteur de la fenêtre */
+}
+.connexion > h1 {
+  margin-left: 350px;
+}
+.form-connexion > form {
+  margin-left: 350px;
+  flex-direction: column; /* Organiser les éléments en colonne */
+  width: 100px;
+}
+.password {
+  margin-top: 100px;
+}
