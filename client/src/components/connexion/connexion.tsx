@@ -1,11 +1,14 @@
 import "./connexion.css";
-
+import { toast } from "react-toastify";
 function Connexion() {
+  const handleClick = () => {
+    toast.success("Connexion approuvée");
+  };
   return (
     <div className="connexion">
       <h1>Connexion</h1>
       <div className="form-connexion">
-        <form action="/submit_form" method="POST">
+        <form className="form" action="/submit_form" method="POST">
           <label htmlFor="email">adresse mail</label>
           <input
             type="email"
@@ -25,7 +28,9 @@ function Connexion() {
             required
           />
 
-          <input type="submit" value="Submit" />
+          <button type="button" onClick={handleClick}>
+            Se connecter
+          </button>
         </form>
       </div>
     </div>

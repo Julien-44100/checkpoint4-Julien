@@ -1,0 +1,20 @@
+.footer {
+  background-color: #808080;
+  height: 50px;
+}
+.footer-p {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  .footer {
+    width: 600px;
+  }
+  .footer-p {
+    color: white;
+
+    margin-top: 450px;
+  }
+}

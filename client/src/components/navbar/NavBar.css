@@ -4,6 +4,17 @@
 }
 .navbar-connexion-link {
   color: white;
-  margin-left: 800px;
+  margin-left: 1750px;
   margin-top: 80px;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    width: 600px;
+  }
+  .navbar-connexion-link {
+    color: white;
+    margin-left: 450px;
+    margin-top: 80px;
+  }
 }
