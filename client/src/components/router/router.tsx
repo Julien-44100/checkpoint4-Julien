@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../../App";
-import Inscriptionform from "../inscription/Inscription";
 import Connexion from "../connexion/connexion";
+import Inscriptionform from "../inscription/Inscription";
 
 const router = createBrowserRouter([
   {
