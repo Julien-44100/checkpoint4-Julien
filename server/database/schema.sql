@@ -20,7 +20,19 @@ CREATE TABLE actualité (
     add_photo VARCHAR(255),  -- Utilisation d'un chemin pour la photo (si vous ne voulez pas utiliser BLOB)
     actuality VARCHAR(1000) NOT NULL,
     PRIMARY KEY (id)
+)
+CREATE TABLE add_actuality(
+    id INT NOT NULL AUTO_INCREMENT,
+    name_actuality VARCHAR(100) NOT NULL,
+    add_photo VARCHAR(255),  -- Utilisation d'un chemin pour la photo (si vous ne voulez pas utiliser BLOB)
+    actuality VARCHAR(1000) NOT NULL,
+    PRIMARY KEY (id)
 );
+INSERT INTO add_actuality (name_actuality, add_photo, actuality)
+VALUES
+('mars',
+ 'images/mars2025.jpg',
+ 'mars 2025');
 
 INSERT INTO inscription (name, firstname, mail, mot_de_passe)
 VALUES ('John', 'Doe', 'johndoe@example.com', 'password123');

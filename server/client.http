@@ -1,0 +1,12 @@
+# router.post("/api/Add-actuality", addActualityActions.add);
+
+POST http://localhost:3310/api/Add-actuality HTTP/1.1
+content-type: application/json
+
+
+
+{
+    "name_actuality": "mars",
+    "add_photo": "images/mars2025.jpg",
+    "actuality": "mars 2025'"
+}
