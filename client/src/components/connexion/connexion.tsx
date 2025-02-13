@@ -4,9 +4,9 @@ import { toast } from "react-toastify";
 function Connexion() {
   const navigate = useNavigate();
   const handleClick = (e: React.FormEvent) => {
-    e.preventDefault(); // Empêcher la soumission du formulaire par défaut
-    toast.success("Connexion approuvée"); // Afficher le toast
-    navigate("/Actuality"); // Naviguer vers la page Actualité
+    e.preventDefault();
+    toast.success("Connexion approuvée");
+    navigate("/Actuality");
   };
   return (
     <div className="connexion">

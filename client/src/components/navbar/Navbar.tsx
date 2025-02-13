@@ -15,7 +15,6 @@ function Navbar() {
             </Link>
           )}
 
-        {/* Afficher "Connexion" sauf si on est sur la page de connexion */}
         {location.pathname !== "/Connexion" &&
           location.pathname !== "/Actuality" && (
             <Link className="navbar-connexion-link" to="/">
@@ -23,7 +22,6 @@ function Navbar() {
             </Link>
           )}
 
-        {/* Afficher "Ajouter une actualité" seulement sur la page Actuality */}
         {location.pathname === "/Actuality" && (
           <Link className="navbar-connexion-link" to="/Ajoutactualité">
             Ajouter une actualité

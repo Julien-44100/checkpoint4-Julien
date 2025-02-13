@@ -6,7 +6,7 @@ function AddActuality() {
   const [nameActuality, setNameActuality] = useState("");
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
   const [actuality, setActuality] = useState("");
-  const navigate = useNavigate(); // Permet la redirection
+  const navigate = useNavigate();
 
   const handlePhotoChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -43,12 +43,10 @@ function AddActuality() {
       if (response.ok) {
         alert("Actualité ajoutée avec succès !");
 
-        // Réinitialiser les champs
         setNameActuality("");
         setSelectedPhoto(null);
         setActuality("");
 
-        // Rediriger vers la page d'affichage des actualités
         navigate("/actuality", { replace: true });
       } else {
         alert("Erreur lors de l'ajout de l'actualité.");

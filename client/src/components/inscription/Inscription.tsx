@@ -2,10 +2,9 @@ import { toast } from "react-toastify";
 import "./Inscription.css";
 
 function Inscriptionform() {
-  // Fonction handleClick pour afficher le toast
   const handleClick = (e: React.FormEvent) => {
-    e.preventDefault(); // Empêcher la soumission du formulaire par défaut
-    toast.success("Inscription approuvé"); // Afficher le toast
+    e.preventDefault();
+    toast.success("Inscription approuvé");
   };
 
   return (

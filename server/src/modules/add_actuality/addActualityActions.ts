@@ -1,35 +1,16 @@
-import type { RequestHandler } from "express";
-import "./addActualityRepository";
-import addActualityRepository from "./addActualityRepository";
-import { Request, Response } from "express";
+import type { Request, RequestHandler, Response } from "express";
 import client from "../../../database/client";
-
-// const edit: RequestHandler = async (req, res) => {
-//     try {
-//       const addActuality = await videoGamesRepository.create(req.body);
-//       if (addActuality) {
-//         res
-//           .status(201)
-//           .send(`Video game named ${req.body.name} has been created successfully`);
-//       } else {
-//         res.status(404).send("An error occurred");
-//       }
-//     } catch (err) {
-//       console.error(err);
-//     }
-//   };
+import addActualityRepository from "./addActualityRepository";
 
 const add: RequestHandler = async (req, res): Promise<void> => {
   try {
-    // Vérification que tous les champs sont bien remplis
     const { name_actuality, add_photo, actuality } = req.body;
 
     if (!name_actuality || !add_photo || !actuality) {
       res.status(400).json({ error: "Tous les champs sont requis." });
-      return; // ✅ Ajout d'un `return` pour que la fonction s'arrête ici
+      return;
     }
 
-    // Insertion de l'actualité dans la base de données
     const insertedId = await addActualityRepository.create({
       name_actuality,
       add_photo,
@@ -38,7 +19,7 @@ const add: RequestHandler = async (req, res): Promise<void> => {
 
     if (insertedId) {
       res.status(201).json({
-        message: `L'actualité "${name_actuality}" avec la photo "${add_photo}" et le contenu "${actuality}" a été ajoutée avec succès !`,
+        message: `L'actualité "${name_actuality}" a été ajoutée avec succès !`,
         id: insertedId,
       });
     } else {
@@ -51,12 +32,23 @@ const add: RequestHandler = async (req, res): Promise<void> => {
     res.status(500).json({ error: "Erreur serveur lors de l'ajout." });
   }
 };
-export const get = async (req: Request, res: Response) => {
+
+// ✅ Route pour récupérer toutes les actualités
+const get: RequestHandler = async (req, res): Promise<void> => {
   try {
-    const [rows] = await client.query(
+    // Correction du typage pour éviter l'erreur TypeScript
+    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+    const [rows]: any[] = await client.query(
       "SELECT * FROM add_actuality ORDER BY id DESC",
     );
-    res.status(200).json(rows);
+
+    if (Array.isArray(rows)) {
+      res.status(200).json(rows);
+    } else {
+      res
+        .status(500)
+        .json({ error: "Données invalides reçues de la base de données." });
+    }
   } catch (err) {
     console.error("Erreur lors de la récupération des actualités :", err);
     res.status(500).json({
