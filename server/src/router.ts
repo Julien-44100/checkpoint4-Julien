@@ -7,6 +7,7 @@ const router = express.Router();
 /* ************************************************************************* */
 
 // Define item-related routes
+import ActualityActions from "./modules/Actuality/ActualityActions";
 import addActualityActions from "./modules/add_actuality/addActualityActions";
 import itemActions from "./modules/item/itemActions";
 
@@ -14,7 +15,7 @@ router.get("/api/items", itemActions.browse);
 router.get("/api/items/:id", itemActions.read);
 router.post("/api/items", itemActions.add);
 router.get("/api/actualities", addActualityActions.get);
-
+router.put("/api/change-actuality/:id", ActualityActions.edit);
 /* ************************************************************************* */
-router.post("/api/Add-actuality", addActualityActions.add);
+router.post("/api/Add-actuality/", addActualityActions.add);
 export default router;
