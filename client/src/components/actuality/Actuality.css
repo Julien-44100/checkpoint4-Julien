@@ -1,8 +1,4 @@
-.card-inscription {
-  height: 82vh;
-}
-
-.inscription {
+.title-actuality {
   display: flex;
   justify-content: center;
   align-items: center;

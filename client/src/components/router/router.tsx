@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "../../App";
 import Connexion from "../connexion/connexion";
 import Inscriptionform from "../inscription/Inscription";
+import Actualité from "../actuality/Actuality";
+import AddActuality from "../add_actuality/AddActuality";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +17,14 @@ const router = createBrowserRouter([
       {
         path: "/inscriptionform", // La route pour l'inscription
         element: <Inscriptionform />,
+      },
+      {
+        path: "/Actuality", // La route pour l'inscription
+        element: <Actualité />,
+      },
+      {
+        path: "/Ajoutactualité", // La route pour l'inscription
+        element: <AddActuality />,
       },
     ],
   },

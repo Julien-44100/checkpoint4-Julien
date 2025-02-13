@@ -1,9 +1,8 @@
 .connexion {
-  align-items: center;
   height: 82vh;
 }
 
-.connexion > h1 {
+.connexion > .connexion-h1 {
   display: flex;
   justify-content: center;
   align-items: center;
