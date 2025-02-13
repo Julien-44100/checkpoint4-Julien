@@ -9,6 +9,7 @@
   padding: 20px;
   height: 100vh;
   padding: 20px;
+  overflow-y: scroll;
 }
 
 .actuality {
@@ -48,6 +49,6 @@
 
 @media (max-width: 768px) {
   .actuality-card {
-    width: 95%;
+    width: 90%;
   }
 }

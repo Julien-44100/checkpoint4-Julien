@@ -2,21 +2,21 @@
   background-color: #808080;
   height: 50px;
   min-width: 80%;
-  max-width: 100%;
+  max-width: 116%;
+  margin-bottom: 20px;
 }
 .navbar-connexion-link {
   color: white;
-  margin-left: 250px;
-  margin-top: 80px;
+  margin-left: 1200px;
 }
 
 @media screen and (max-width: 600px) {
   .navbar {
-    width: 600px;
+    width: 1100px;
   }
   .navbar-connexion-link {
     color: white;
-    margin-left: 50px;
+    margin-left: 150px;
     margin-top: 80px;
   }
 }
