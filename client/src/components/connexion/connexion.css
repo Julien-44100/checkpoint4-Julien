@@ -1,42 +1,88 @@
+/* ✅ Fond général */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* ✅ Conteneur principal : Centrage parfait */
 .connexion {
-  height: 82vh;
+  height: 100vh; /* Prend toute la hauteur de l'écran */
+  padding: 20px;
 }
 
-.connexion > .connexion-h1 {
+/* ✅ Carte de connexion */
+.card-connexion {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 400px; /* Taille de base */
+  max-width: 90%; /* S'adapte aux petits écrans */
+}
+
+/* ✅ Titre */
+.connexion-h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* ✅ Formulaire */
+.form-connexion {
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.form-connexion > form {
-  margin-left: 780px;
   flex-direction: column;
   align-items: center;
-  width: 300px;
+  width: 100%;
 }
 
+/* ✅ Champs d'entrée */
 input {
   width: 100%;
   height: 40px;
   padding: 10px;
   border-radius: 8px;
   margin-top: 15px;
+  border: 1px solid #ccc;
 }
 
+/* ✅ Champ de mot de passe */
 .password {
   margin-top: 40px;
 }
 
+/* ✅ Bouton stylisé */
 .submit {
-  margin-top: 20px;
-  border-radius: 8px;
+  width: 100%;
+  height: 40px;
   background-color: #4caf50;
   color: white;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
+  margin-top: 15px;
 }
 
-@media screen and (max-width: 600px) {
-  .form-connexion > form {
-    margin-left: 100px;
+/* ✅ Responsive */
+@media screen and (max-width: 768px) {
+  .card-connexion {
+    width: 90%;
+    padding: 20px;
+  }
+
+  input {
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .submit {
+    height: 35px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-connexion {
+    width: 95%;
+    padding: 15px;
   }
 }

@@ -1,4 +1,5 @@
 import type { Request, RequestHandler, Response } from "express";
+import type { RowDataPacket, FieldPacket } from "mysql2";
 import client from "../../../database/client";
 import addActualityRepository from "./addActualityRepository";
 
@@ -33,12 +34,10 @@ const add: RequestHandler = async (req, res): Promise<void> => {
   }
 };
 
-// ✅ Route pour récupérer toutes les actualités
 const get: RequestHandler = async (req, res): Promise<void> => {
   try {
-    // Correction du typage pour éviter l'erreur TypeScript
-    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
-    const [rows]: any[] = await client.query(
+    // ✅ Correction : On destructure les deux éléments pour éviter l'erreur
+    const [rows, fields]: [RowDataPacket[], FieldPacket[]] = await client.query(
       "SELECT * FROM add_actuality ORDER BY id DESC",
     );
 
@@ -57,4 +56,5 @@ const get: RequestHandler = async (req, res): Promise<void> => {
   }
 };
 
+// ✅ Export correct
 export default { add, get };

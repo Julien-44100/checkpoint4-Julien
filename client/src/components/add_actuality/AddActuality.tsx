@@ -58,8 +58,8 @@ function AddActuality() {
 
   return (
     <div className="add-actuality">
-      <div className="form-connexion">
-        <form className="form" onSubmit={handleSubmit}>
+      <div className="form--add">
+        <form className="form-add-actuality" onSubmit={handleSubmit}>
           <h1 className="name-actuality">Nom de l'actualité</h1>
           <input
             type="text"
