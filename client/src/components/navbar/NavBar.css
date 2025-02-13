@@ -1,11 +1,12 @@
 .navbar {
   background-color: #808080;
   height: 50px;
-  width: 100%;
+  min-width: 80%;
+  max-width: 100%;
 }
 .navbar-connexion-link {
   color: white;
-  margin-left: 1650px;
+  margin-left: 250px;
   margin-top: 80px;
 }
 
@@ -15,7 +16,7 @@
   }
   .navbar-connexion-link {
     color: white;
-    margin-left: 400px;
+    margin-left: 50px;
     margin-top: 80px;
   }
 }

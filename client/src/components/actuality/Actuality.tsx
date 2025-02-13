@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import "./Actuality.css";
 function Actuality() {
   const [actualities, setActualities] = useState<
     {
@@ -20,8 +20,8 @@ function Actuality() {
   }, []);
 
   return (
-    <div>
-      <h1>Liste des Actualités</h1>
+    <div className="listing-actuality">
+      <h1 className="actuality">Liste des Actualités</h1>
       {actualities.length > 0 ? (
         actualities.map((actuality) => (
           <div key={actuality.id} className="actuality-card">

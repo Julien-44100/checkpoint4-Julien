@@ -1,9 +1,35 @@
 .card-inscription {
-  height: 82vh;
+  height: 100vh; /* Prend toute la hauteur de l'écran */
 }
 
 .inscription {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.form {
+  width: 60vh;
+}
+@media screen and (max-width: 768px) {
+  .card-inscription {
+    width: 80%;
+    padding: 20px;
+  }
+
+  input {
+    height: 35px;
+    font-size: 14px;
+  }
+
+  button {
+    height: 35px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-inscription {
+    width: 50vh;
+    padding: 15px;
+  }
 }
