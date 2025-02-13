@@ -10,8 +10,8 @@ function Connexion() {
   };
   return (
     <div className="connexion">
-      <h1 className="connexion-h1">Connexion</h1>
       <div className="form-connexion">
+        <h1 className="connexion-h1">Connexion</h1>
         <form className="form" action="/submit_form" method="POST">
           <label htmlFor="email">adresse mail</label>
           <input

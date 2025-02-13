@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 function AddActuality() {
   const [nameActuality, setNameActuality] = useState("");
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
-  const [actuality, setActuality] = useState("");
+  const [addactuality, setAddActuality] = useState("");
   const navigate = useNavigate();
 
   const handlePhotoChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -25,7 +25,7 @@ function AddActuality() {
     const formData = {
       name_actuality: nameActuality,
       add_photo: selectedPhoto,
-      actuality: actuality,
+      actuality: addactuality,
     };
 
     try {
@@ -45,7 +45,7 @@ function AddActuality() {
 
         setNameActuality("");
         setSelectedPhoto(null);
-        setActuality("");
+        setAddActuality("");
 
         navigate("/actuality", { replace: true });
       } else {
@@ -107,8 +107,8 @@ function AddActuality() {
             name="actuality"
             placeholder="actuality"
             required
-            value={actuality}
-            onChange={(e) => setActuality(e.target.value)}
+            value={addactuality}
+            onChange={(e) => setAddActuality(e.target.value)}
           />
 
           <button type="submit">Envoyer</button>

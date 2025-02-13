@@ -1,5 +1,5 @@
 import type { Request, RequestHandler, Response } from "express";
-import type { RowDataPacket, FieldPacket } from "mysql2";
+import type { FieldPacket, RowDataPacket } from "mysql2";
 import client from "../../../database/client";
 import addActualityRepository from "./addActualityRepository";
 
