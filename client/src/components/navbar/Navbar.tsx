@@ -6,13 +6,15 @@ function Navbar() {
 
   return (
     <section className="navbar">
-      <img
-        className="image-space"
-        src="./src/assets/images/actuality-ronde.webp"
-        alt="logo-space"
-      />
+      <a href="/">
+        <img
+          className="image-space"
+          src="./src/assets/images/actuality-ronde.webp"
+          alt="logo-space"
+        />
+      </a>
+
       <ul className="navbar-list">
-        {/* Afficher "Inscription" sauf si on est sur la page "Actuality" ou "Ajoutactualité" */}
         {location.pathname !== "/inscriptionform" &&
           location.pathname !== "/Actuality" &&
           location.pathname !== "/Ajoutactualité" && (
