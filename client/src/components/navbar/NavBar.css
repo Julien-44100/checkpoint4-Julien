@@ -1,9 +1,14 @@
 .navbar {
   background-color: #808080;
-  height: 50px;
+  height: 120px;
   min-width: 80%;
   max-width: 116%;
   margin-bottom: 20px;
+}
+.image-space {
+  width: 50px;
+  margin-left: 950px;
+  margin-top: 20px;
 }
 .navbar-connexion-link {
   color: white;
@@ -11,6 +16,9 @@
 }
 
 @media screen and (max-width: 600px) {
+  .image-space {
+    display: none;
+  }
   .navbar {
     width: 1100px;
   }
